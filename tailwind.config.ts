@@ -1,4 +1,6 @@
-import type { Config } from 'tailwindcss'
+import type { Config } from 'tailwindcss';
+import { rubikGlitch } from './app/layout';
+import { fontFamily } from 'tailwindcss/defaultTheme';
 
 const config: Config = {
   content: [
@@ -13,6 +15,9 @@ const config: Config = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      fontFamily: {
+        rubikGlitch: ['var(--font-rubik-glitch)', ...fontFamily.sans]
+      }
     },
   },
   plugins: [],
