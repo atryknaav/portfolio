@@ -41,7 +41,7 @@ export default async function POST(request: NextApiRequest, res:NextApiResponse<
             html: `
             <p>Name: JOB </p>
             <p>Email: ${email} </p>
-            <p>Message: ${message} </p>
+            <p>${message} </p>
             `,
         })
 

@@ -6,15 +6,23 @@ import { FaLinkedin } from 'react-icons/fa6';
 import { useState } from 'react';
 // import sendEmail from '@/pages/api/sendEmail.js';
 
+type EmailType = `${string}@${string}`;
+
 const Contact = () => {
 
  
     const[email, setEmail] = useState('');
     const[message, setMessage] = useState('');
 
+
     async function handleSubmit(e:React.FormEvent<HTMLFormElement>) {
 
+
+        
         e.preventDefault();
+        if (message === '' || !(email.indexOf('@') > -1)){
+            throw new Error('Enter valid email');
+        }
         const formData = {
             message: message,
             email: email
@@ -72,6 +80,9 @@ const Contact = () => {
             </button>
           </div>
           </form>
+
+
+          
 
     </div>
   )
