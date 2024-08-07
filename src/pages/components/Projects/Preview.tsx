@@ -15,12 +15,13 @@ interface Props{
 const Preview = (props: Props) => {
     const {name, url, img, features, description, github} = props;
   return (
-    <div className=' bg-neutral-900 flex flex-col gap-3 select-none p-2 shadow-inner border-[1px] border-gray-700 w-fit hover:scale-110 transition-all hover:cursor-pointer rounded-lg max-w-[500px]'>
+    <a href={github} target='_blank'>
+    <div className=' bg-neutral-900 flex flex-col gap-3 select-none p-2 shadow-inner border-[1px] border-gray-700 w-fit hover:scale-95 transition-all hover:cursor-pointer rounded-lg max-w-[1000px]'>
         <div className='border-gray-800 border-[1px] p-1'>
             <Image 
                 src={img}
-                width={500}
-                height={500}
+                width={1000}
+                height={1000}
                 alt="Picture of the author"
                 
             />
@@ -50,14 +51,17 @@ const Preview = (props: Props) => {
 
                 </div>
 
-                <div className=' hover:text-lime-400 transition-colors'>
-                <a href={url} target='_blank'>
-                    <FaReceipt />
-                    </a>
-                </div>
+                {(name === 'My Portfolio')? '' :
+                    <div className=' hover:text-lime-400 transition-colors'>
+                    <a href={url} target='_blank'>
+                        <FaReceipt />
+                        </a>
+                    </div>
+                }
             </div>
         </div>
     </div>
+    </a>
   )
 }
 
