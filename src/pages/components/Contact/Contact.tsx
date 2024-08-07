@@ -21,8 +21,8 @@ const Contact = () => {
         
         e.preventDefault();
         if (message === '' || !(email.indexOf('@') > -1)){
-            throw new Error('Enter valid email');
             alert('Enter valid email');
+            throw new Error('Enter valid email');
         }
         const formData = {
             message: message,
