@@ -44,8 +44,9 @@ const Contact = () => {
                 console.log("falling over")
                 throw new Error(`response status: ${response.status}`);
             }
-            const responseData = await response.json();
-            console.log(responseData['message'])
+            setMessage('');
+            setEmail('');
+            
     
             alert('Message successfully sent');
         } catch (err) {
