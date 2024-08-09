@@ -6,7 +6,7 @@ import { RiNextjsFill, RiNodejsFill } from 'react-icons/ri'
 
 const TechStack = () => {
   return (
-    <div id='contact' className='flex flex-col gap-8 text-white px-20 mb-10'>
+    <div className='flex flex-col gap-8 text-white px-20 mb-10'>
           <div className='text-[2rem] font-bold underline underline-offset-8 decoration-lime-400'>
               Technology Stack
           </div>
